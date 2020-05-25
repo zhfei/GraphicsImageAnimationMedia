@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Thr-Nu-GrG">
+                                <rect key="frame" x="57" y="94" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="swN-Sm-bvT"/>
+                                    <constraint firstAttribute="width" constant="300" id="yIG-iL-gVq"/>
+                                </constraints>
+                            </imageView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="FT3-WP-gd3">
+                                <rect key="frame" x="107" y="544" width="200" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="EJ3-SM-y6z"/>
+                                    <constraint firstAttribute="width" constant="196" id="O0l-Im-jWv"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="sliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="hZo-QK-Eju"/>
+                                </connections>
+                            </slider>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="YXJ-cf-Kyg">
+                                <rect key="frame" x="57" y="464" width="300" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="高斯模镜"/>
+                                    <segment title="旧色调"/>
+                                    <segment title="锐化突出"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentSelect:" destination="BYZ-38-t0r" eventType="valueChanged" id="0Eu-UI-2Ga"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="FT3-WP-gd3" firstAttribute="top" secondItem="Thr-Nu-GrG" secondAttribute="bottom" constant="150" id="I9f-v8-Uhz"/>
+                            <constraint firstItem="FT3-WP-gd3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WjI-Qj-jSf"/>
+                            <constraint firstItem="Thr-Nu-GrG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="eKd-3Q-UrR"/>
+                            <constraint firstItem="Thr-Nu-GrG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ob4-B1-R7p"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="Thr-Nu-GrG" id="nCL-xc-9QO"/>
+                        <outlet property="segmentedControl" destination="YXJ-cf-Kyg" id="PGa-EN-MKV"/>
+                        <outlet property="slider" destination="FT3-WP-gd3" id="OF7-c5-Dog"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="95.758928571428569"/>
+        </scene>
+    </scenes>
+</document>

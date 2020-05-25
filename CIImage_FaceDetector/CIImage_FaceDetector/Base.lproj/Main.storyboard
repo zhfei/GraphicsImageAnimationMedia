@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="girl_dog_2" translatesAutoresizingMaskIntoConstraints="NO" id="iSc-7g-6hW">
+                                <rect key="frame" x="57" y="90" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="beV-Tn-EV0"/>
+                                    <constraint firstAttribute="width" constant="300" id="bz8-kU-TiG"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OEd-Ul-Wgj">
+                                <rect key="frame" x="125" y="443" width="164" height="38"/>
+                                <color key="backgroundColor" red="0.2470588235" green="0.52549019610000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="164" id="qca-kg-0v7"/>
+                                    <constraint firstAttribute="height" constant="38" id="xXL-2G-BxX"/>
+                                </constraints>
+                                <state key="normal" title="人脸识别">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="faceDetect:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LwZ-L4-Kcy"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8Wh-R6-Wq0">
+                                <rect key="frame" x="107" y="563" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="hyr-a2-gEk"/>
+                                    <constraint firstAttribute="width" constant="200" id="yqv-iy-jj2"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="iSc-7g-6hW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="46" id="5bf-cy-dDN"/>
+                            <constraint firstItem="OEd-Ul-Wgj" firstAttribute="top" secondItem="iSc-7g-6hW" secondAttribute="bottom" constant="53" id="6YE-rh-slO"/>
+                            <constraint firstItem="8Wh-R6-Wq0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9qL-NI-j3l"/>
+                            <constraint firstItem="8Wh-R6-Wq0" firstAttribute="top" secondItem="OEd-Ul-Wgj" secondAttribute="bottom" constant="82" id="TFW-wK-eVu"/>
+                            <constraint firstItem="iSc-7g-6hW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fY0-jo-LJH"/>
+                            <constraint firstItem="OEd-Ul-Wgj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qPB-TR-wZj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="inputImageView" destination="iSc-7g-6hW" id="9GW-30-oN7"/>
+                        <outlet property="outputImageView" destination="8Wh-R6-Wq0" id="6Ba-Xo-Gfo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="95.758928571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="girl_dog_2" width="600" height="600"/>
+    </resources>
+</document>
